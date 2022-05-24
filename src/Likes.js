@@ -7,6 +7,7 @@ export default class Likes extends Component {
     this.state = {
       likes: 0,
     };
+    this.incLikes = this.incLikes.bind(this);
   }
 
   incLikes() {
@@ -18,7 +19,12 @@ export default class Likes extends Component {
     return (
       <div>
         <h1> Total Likes {this.state.likes}</h1>
-        <button onClick={() => this.incLikes()}> Like 👍 </button>
+        <button onClick={this.incLikes.bind(this)}> Like 👍 </button>
+
+        {/* Second Way :  +bind in constructor */}
+        {/* <button onClick={this.incLikes}> Like 👍 </button> */}
+        {/* First Way */}
+        {/* <button onClick={() => this.incLikes()}> Like 👍 </button> */}
       </div>
     );
   }

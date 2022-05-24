@@ -4,6 +4,7 @@ import PropsDemo from "./PropsDemo";
 import PropsDemo2 from "./PropsDemo2";
 import Message from "./Message";
 import Likes from "./Likes";
+import PropTypesDemo from "./PropTypesDemo";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <PropsDemo name="Guest" email="admin@helpdesk.in">
         defined text
       </PropsDemo>
+      <PropTypesDemo />
     </>
   );
 }
